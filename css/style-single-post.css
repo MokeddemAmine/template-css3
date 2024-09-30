@@ -1,0 +1,465 @@
+
+/* General style */
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family:'Lucida Sans', sans-serif;
+    outline:none;
+}
+.container{
+    width:80%;
+    margin:auto;
+}
+.clear{
+    clear:both;
+}
+
+.sous-header{
+    padding:40px 0 20px 0;
+}
+.sous-header-title{
+    text-transform:uppercase;
+}
+.sous-header .line{
+    display:inline-block;
+    width:50px;
+    height:3px;
+    background-color:#6195ff;
+    margin-top:10px;
+}
+
+
+
+/* 1. navbar */
+
+
+.navbar{
+    position:fixed;
+    width:100%;
+    background:#fff;
+    z-index:10;
+}
+.navbar-item{
+    float:left;
+}
+.logo{
+    width:40%;
+}
+.dropdown{
+    width:60%;
+    text-align:right;
+    padding-top:30px;
+}
+.dropdown ul{
+    list-style:none;
+}
+.dropdown ul li{
+    display:inline-block;
+    margin-right:30px;
+}
+.dropdown ul li a{
+    text-decoration:none;
+    text-transform:capitalize;
+    color:#000;
+    font-size:20px;
+}
+li.dropdown-blog{
+    position:relative;
+}
+li.dropdown-blog .dropdown-blog-item{
+    position:absolute;
+    top:25px;
+    left:-40px;
+    display:inline-block;
+    width:150px;
+    background-color:#6195ff;
+    padding:10px;
+    text-align:center;
+    opacity:0;
+    visibility:hidden;
+    transition:opacity 0.5s, visibility 0.5s;
+}
+.dropdown-blog:hover .dropdown-blog-item{
+    opacity:1;
+    visibility:visible;
+}
+
+/*  2. header  */
+
+.header{
+    padding-top:130px;
+    padding-bottom:60px;
+    background-color:#eee;
+}
+.header-item{
+    width:50%;
+    float:left;
+}
+.header-title{
+    font-size:40px;
+    font-weight:bold;
+    text-transform:capitalize;
+}
+.header-breadcrumb{
+     text-align:right;
+     list-style:none;
+     padding:10px 16px;
+}
+.header-breadcrumb li{
+    display:inline-block;
+    font-size:18px;
+    text-transform:capitalize;
+}
+.header-breadcrumb li+li::before{
+    padding:8px;
+    color:black;
+    content:"/\00a0";
+}
+.header-breadcrumb li a{
+    text-decoration:none;
+    color:blue;
+}
+.header-breadcrumb li a:hover{
+    color:#014472;
+    text-decoration:underline;
+}
+
+/* 3. posts  */
+
+.posts{
+    padding-top:100px;
+}
+
+    /* 3.1 posts identified */
+
+    .posts-identified{
+        width:75%;
+        float:left;
+    }
+
+         /* 3.1.1 posts identified image and his description */
+        .posts-identified img {
+            width:100%;
+            height:500px;
+        }
+        ul.posts-identified-icon{
+            list-style:none;
+            padding:20px 0;
+        }
+        .posts-identified-icon li{
+            display:inline-block;
+            padding-right:10px;
+            font-weight:700;
+            
+        }
+        .posts-identified-icon li i{
+            color:#6195ff;
+        }
+        .posts-identified-title{
+            font-weight:bold;
+            padding-bottom:20px;
+        }
+
+        .posts-identified-desc{
+            color:#aaa;
+            padding-bottom:20px;
+            line-height:1.6;
+            font-size:18px;
+        }
+
+        /* 3.1.2 Tags */
+
+        ul.posts-identified-tags{
+            list-style:none;
+            padding:20px 0;
+        }
+        ul.posts-identified-tags li{
+            display:inline-block;
+            padding:10px;
+            background-color:#eee;
+        }
+        ul.posts-identified-tags li a{
+            text-decoration:none;
+            color:#000;
+            text-transform:capitalize;
+        }
+        ul.posts-identified-tags li a i{
+            color:#6195ff;
+        }
+        .posts-identified-tags:before{
+            content:"Tags:";
+            font-weight:bold;
+        }
+
+        /* 3.1.3 Statu */
+
+        .posts-identified-statu{
+            padding:20px 20px 50px 200px;
+            position:relative;
+            border:1px solid #eee;
+        }
+        
+        .posts-identified-statu img{
+            position:absolute;
+            top:20px;
+            left:20px;
+            width:160px;
+            height:160px;
+        }
+        
+        .posts-identified-statu-NL{
+            border-bottom:1px solid #eee;
+            padding-bottom:20px;
+        }
+        
+        .posts-identified-statu-NL .title{
+            text-transform:uppercase;
+            float:left;
+            width:50%;
+        }
+        .posts-identified-statu-NL ul.list{
+            list-style:none;
+            text-align:right;
+            width:50%;
+            float:left;
+        }
+        .posts-identified-statu-NL ul.list li{
+            display:inline-block;
+        }
+        .posts-identified-statu-NL ul.list li a{
+            background:#6195ff;
+            color:#fff;
+            display:inline-block;
+            width:30px;
+            height:30px;
+            text-align:center
+        }
+        .posts-identified-statu-NL ul.list li a i{
+            line-height:30px;
+        }
+
+        .posts-identified-statu-desc{
+            color:#aaa;
+            padding:40px 40px 0 0;
+            font-size:20px;
+        }
+
+        /* 3.1.4 comment statu */
+        .posts-identified-comment{
+            border:1px solid #eee;
+        }
+        .posts-identified-comment-item{
+            padding:20px 20px 30px 140px;
+            position:relative;
+            border:1px solid #eee;
+        }
+        .posts-identified-comment img{
+            position:absolute;
+            top:20px;
+            left:20px;
+            width:100px;
+            height:100px;
+        }
+        
+        .posts-identified-comment-TR .title, .posts-identified-comment-TR .reply{
+            width:50%;
+            float:left;
+            text-transform:uppercase;
+        }
+        .posts-identified-comment-TR .title h3{
+            display:inline-block;
+            width:20%;
+        }
+        .posts-identified-comment-TR .title span{
+            color:#aaa;
+        }
+        .posts-identified-comment-TR .reply{
+            text-align:right;
+        }
+        .posts-identified-comment-TR .reply a{
+            color:#6195ff;
+            text-decoration:none;
+        }
+        .posts-identified-comment-desc{
+            color:#aaa;
+            padding:20px 20px 0 0;
+            font-size:20px;
+        }
+        .margin-y{
+            margin:0 20px;
+        }
+        .margin-bt{
+            margin-bottom:20px;
+        }
+
+        /* 3.1.5 leave a reply */
+        .reply{
+            margin-bottom:200px;
+        }
+        .reply input.name, .reply input.email{
+            border:none;
+            width:49%;
+            height:40px;
+            background-color:#eee;
+            padding:20px;
+            margin-bottom:20px;
+        }
+        .reply input.email{
+            margin-left:1%;
+        }
+        .reply .comment{
+            border:none;
+            background-color:#eee;
+            padding:20px 0 0 20px;
+            margin-bottom:20px;
+        }
+        .reply input:hover, .reply .comment:hover{
+            border:1px solid #6195ff;
+        }
+        .reply .Submit{
+            border:none;
+            display:inline-block;
+            width:150px;
+            height:50px;
+            background-color:#6195ff;
+            color:#fff;
+            font-size:17px;
+            transition:opacity 0.5s;
+        }
+        .reply .Submit:hover {
+            opacity:0.8;
+        }
+
+    /* 3.2 posts info */
+
+    .posts-info{
+        width:20%;
+        float:left;
+        margin-left:5%;
+    }
+
+         /* 3.2.1 posts info search */
+        .posts-info-search{
+            width:100%;
+            position:relative;
+        }
+        .posts-info-search input{
+            display:inline-block;
+            width:100%;
+            background-color:#eee;
+            border:none;
+            padding:10px;
+        }
+        .posts-info-search i{
+            position:absolute;
+            top:10px;
+            right:10px;
+            color:#6195ff;
+        }
+        .posts-info-search input:focus {
+            border:1px solid #6195ff;
+        }
+
+        /* 3.2.2 posts info category */
+         /* sous-header is in the general*/
+
+         ul.category-item{
+            list-style:none;
+            border-bottom:1px solid #eee;
+         }
+         .category-item li{
+            display:inline-block;
+            width:100%;
+            border-top:1px solid #eee;
+            padding:10px;
+            font-weight:bold;
+         }
+         .category-item-job{
+            display:inline-block;
+            width:70%;
+            text-transform:capitalize;
+            padding:0;
+         }
+         .category-item li a{
+            display:inline-block;
+            width:25%;
+            text-align:right;
+            text-decoration:none;
+            color:#6195ff;
+         }
+    
+        /* 3.3.3 posts info populaire posts
+         /* sous-header is in the general*/
+
+         .populaire-posts-item{
+            padding-left:150px;
+            position:relative;
+            height:80px;
+            margin-bottom:20px;
+         }
+         .populaire-posts-item img{
+            position:absolute;
+            top:0;
+            left:0;
+            width:130px;
+            height:70px; 
+         }
+
+         .populaire-posts-item span{
+            display:block;
+            margin-top:15px;
+            color:#6195ff;
+            font-size:12px;
+         }
+         
+        /* 3.3.4 posts info tags
+         /* sous-header is in the general*/
+
+         .tags span{
+            display:inline-block;
+            background-color:#eee;
+            text-transform:capitalize;
+            padding:10px 15px;
+            margin-bottom:5px;
+         }
+
+/* 4. footer  */
+.footer{
+    background-color:#000;
+    padding:50px 0;
+}
+.container2{
+    width:30%;
+    margin:auto;
+    text-align:center;
+}
+.footer ul.link{
+    list-style:none;
+    margin:40px 0;
+}
+.footer .link li{
+    display:inline-block;
+    margin-left:10px;
+}
+.footer .link li a{
+    display:inline-block;
+    width:40px;
+    height:40px;
+    background-color:#6195ff;
+    color:#fff;
+    text-decoration:none;
+}
+.footer .link li a i{
+    line-height:40px;
+}
+.footer .copyright{
+    text-transform:uppercase;
+    color:#999;
+    opacity:0.6;
+}
+.footer .copyright a{
+    text-decoration:none;
+    color: #6195ff;
+}
